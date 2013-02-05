@@ -4,14 +4,15 @@ Given /the following movies exist/ do |movies_table|
   movies_table.hashes.each do |movie|
     # each returned element will be a hash whose key is the table header.
     # you should arrange to add that movie to the database here.
+    Movie.create movie
   end
-  flunk "Unimplemented"
+#  flunk "Unimplemented"
 end
 
 # Make sure that one string (regexp) occurs before or after another one
 #   on the same page
 
-Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
+Then /I should see "(.*)" before "(.*)"/ do |film1, film2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
   flunk "Unimplemented"
