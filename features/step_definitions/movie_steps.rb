@@ -15,7 +15,8 @@ end
 Then /I should see "(.*)" before "(.*)"/ do |film1, film2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
-  flunk "Unimplemented"
+  #flunk "Unimplemented"
+    page.body.should =~ /#{film1}.*#{film2}/im
 end
 
 # Make it easier to express checking or unchecking several boxes at once
